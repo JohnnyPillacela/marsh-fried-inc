@@ -1,0 +1,35 @@
+---
+description: Autonomous execution — defines what the agent can run immediately vs. must confirm
+alwaysApply: true
+---
+
+# Autonomous Execution
+
+Run safe operations immediately without asking. Always stop and confirm before any destructive or irreversible action.
+
+## Auto-run without asking (safe)
+
+- Reading files, listing directories, running `tree`, `ls`, `cat`, `head`, `tail`
+- Searching with `grep`, `rg`, `find`
+- Running `git status`, `git log`, `git diff`, `git branch`
+- Installing dependencies: `npm install`, `pip install`, `pnpm install`
+- Running build/lint/type-check scripts: `npm run build`, `npm run lint`, `tsc`
+- Starting dev servers: `npm run dev`
+- Creating new files or writing to files that do not already exist
+
+## ALWAYS stop and confirm before running
+
+- `rm`, `rmdir`, or any file/folder deletion
+- `git push --force` or `git push -f`
+- `git reset --hard`
+- `git rebase` (interactive or otherwise)
+- `DROP`, `DELETE`, `TRUNCATE` in any database query
+- Overwriting or modifying `.env`, `.env.local`, or any secrets file
+- Any command the user has not previously approved in this session that modifies production systems
+
+## General rules
+
+1. Never ask "Can I run X?" for safe operations — just run it.
+2. If a command is not clearly in the safe list above, treat it as dangerous and confirm first.
+3. If multiple approaches exist, pick the most reasonable one, proceed, and note the choice made.
+4. Summarize what was done after completing a task.

@@ -2,16 +2,16 @@ import type { ContactDict } from "@/types/dictionary"
 
 export const contactDict = {
     en: {
-        title: "Contact Us",
+        title: "Schedule an Appointment",
         description:
-            "Reach out today for a free consultation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. We'd love to hear about your project.",
+            "Ready to get your finances in order? Reach out today for a free consultation with one of our CPAs. We serve businesses throughout Union County and New Jersey.",
         cta: "Send a message",
         ctaHref: "#contact",
     } satisfies ContactDict,
     es: {
-        title: "Contáctanos",
+        title: "Agendar una cita",
         description:
-            "Contáctanos hoy para una consulta gratuita. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nos encantaría conocer tu proyecto.",
+            "¿Listo para poner tus finanzas en orden? Contáctanos hoy para una consulta gratuita con uno de nuestros CPAs. Atendemos empresas en todo el condado de Union y Nueva Jersey.",
         cta: "Enviar mensaje",
         ctaHref: "#contact",
     } satisfies ContactDict,

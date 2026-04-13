@@ -3,30 +3,30 @@ import type { AboutDict } from "@/types/dictionary"
 export const aboutDict = {
     en: {
         title: "About Us",
-        tagline: "Small team. Real results.",
+        tagline: "Local expertise. Trusted results.",
         description:
-            "We are a small agency focused on helping businesses grow online. With years of experience in web design, development, and digital strategy, we craft solutions that are fast, simple, and built to last.",
+            "Marsh Fried Incorporated is a CPA firm serving businesses throughout Union County and New Jersey. With over 20 years of experience, we provide personalized accounting, bookkeeping, and tax services that help businesses stay compliant, organized, and financially healthy.",
         highlights: [
-            "Fast turnaround — most sites launch in 2–3 weeks",
-            "No bloated agency overhead — you work directly with us",
-            "Built for performance, SEO, and long-term maintainability",
-            "Bilingual support in English and Spanish",
+            "Over 500 businesses served across New Jersey",
+            "CPA licensed and fully insured",
+            "Bilingual service in English and Spanish",
+            "Personalized attention — you work directly with our CPAs",
         ],
-        cta: "See what we can build for you",
+        cta: "See our services",
         ctaHref: "#services",
     } satisfies AboutDict,
     es: {
         title: "Sobre Nosotros",
-        tagline: "Equipo pequeño. Resultados reales.",
+        tagline: "Experiencia local. Resultados de confianza.",
         description:
-            "Somos una agencia pequeña enfocada en ayudar a las empresas a crecer en línea. Con años de experiencia en diseño web, desarrollo y estrategia digital, creamos soluciones rápidas, simples y hechas para durar.",
+            "Marsh Fried Incorporated es una firma de CPA que atiende a empresas en el condado de Union y en todo Nueva Jersey. Con más de 20 años de experiencia, ofrecemos servicios personalizados de contabilidad, teneduría de libros e impuestos que ayudan a las empresas a mantenerse en cumplimiento, organizadas y financieramente saludables.",
         highlights: [
-            "Entrega rápida — la mayoría de los sitios se lanzan en 2–3 semanas",
-            "Sin gastos de agencia inflados — trabajas directamente con nosotros",
-            "Construido para rendimiento, SEO y mantenibilidad a largo plazo",
-            "Soporte bilingüe en inglés y español",
+            "Más de 500 empresas atendidas en Nueva Jersey",
+            "CPA con licencia y completamente asegurado",
+            "Servicio bilingüe en inglés y español",
+            "Atención personalizada — trabajas directamente con nuestros CPAs",
         ],
-        cta: "Mira lo que podemos construir para ti",
+        cta: "Ver nuestros servicios",
         ctaHref: "#services",
     } satisfies AboutDict,
 } as const

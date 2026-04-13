@@ -3,18 +3,18 @@ import type { StatsDict } from "@/types/dictionary"
 export const statsDict = {
     en: {
         items: [
-            { value: "50+", label: "Clients served" },
-            { value: "3 wks", label: "Average launch" },
-            { value: "2", label: "Languages supported" },
-            { value: "100%", label: "Satisfaction guaranteed" },
+            { value: "1000+", label: "Clients served" },
+            { value: "20+", label: "Years of experience" },
+            { value: "98%", label: "Client retention rate" },
+            { value: "100%", label: "CPA certified" },
         ],
     } satisfies StatsDict,
     es: {
         items: [
-            { value: "50+", label: "Clientes atendidos" },
-            { value: "3 sem", label: "Lanzamiento promedio" },
-            { value: "2", label: "Idiomas disponibles" },
-            { value: "100%", label: "Satisfacción garantizada" },
+            { value: "1000+", label: "Clientes atendidos" },
+            { value: "20+", label: "Años de experiencia" },
+            { value: "98%", label: "Tasa de retención" },
+            { value: "100%", label: "Certificación CPA" },
         ],
     } satisfies StatsDict,
 } as const

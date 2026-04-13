@@ -3,7 +3,6 @@ import Image from "next/image"
 import { Container } from "@/components/layout/container"
 import { Section } from "@/components/layout/section"
 import { CtaButton } from "@/components/shared/cta-button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { sectionBg } from "@/config/sections"
 import { shared } from "@/content/shared"
@@ -21,27 +20,27 @@ export default function BriefHero({ dict }: Props) {
     const showSecondaryCta = Boolean(dict.secondaryCta)
 
     return (
-        <Section id="hero" variant={sectionBg.hero}>
-            <Container>
-                <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12 lg:gap-16">
-                    {/* Left: text */}
-                    <div className="flex min-w-0 flex-col">
-                        <p className="font-serif text-sm text-muted-foreground">
+        <Section id="hero" variant={sectionBg.hero} className="py-0 md:py-0">
+            <Container className="px-4 md:px-4">
+                <div className="grid items-stretch md:grid-cols-2">
+                    {/* Left: text — Container handles horizontal padding */}
+                    <div className="flex flex-col justify-between py-10 md:py-18">
+                        <p className="my-2 font-serif text-xl text-muted-foreground">
                             {dict.eyebrow ?? shared.siteName}
                         </p>
-                        <h1 className="mt-3 font-serif text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-[2.75rem] lg:leading-[1.1]">
+                        <h1 className="my-2 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl">
                             {dict.title}
                         </h1>
-                        <p className="mt-5 max-w-xl text-lg text-muted-foreground">
+                        <p className="my-2 text-lg text-muted-foreground">
                             {dict.subtitle}
                         </p>
-                        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                        <div className="my-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                             {dict.cta && (
                                 <CtaButton
                                     href={dict.ctaHref ?? "#contact"}
                                     variant="primary"
                                     size="lg"
-                                    className="min-w-48 justify-center"
+                                    className="justify-center"
                                 >
                                     {dict.cta}
                                 </CtaButton>
@@ -49,9 +48,9 @@ export default function BriefHero({ dict }: Props) {
                             {showSecondaryCta && (
                                 <CtaButton
                                     href={secondaryHref}
-                                    variant="secondary"
+                                    variant="outline"
                                     size="lg"
-                                    className="min-w-48 justify-center"
+                                    className="justify-center"
                                 >
                                     {dict.secondaryCta}
                                 </CtaButton>
@@ -59,27 +58,19 @@ export default function BriefHero({ dict }: Props) {
                         </div>
                     </div>
 
-                    {/* Right: image */}
-                    <div className="relative min-w-0">
-                        <Card className="gap-0 overflow-hidden p-0 py-0 shadow-sm ring-border/70">
-                            <CardContent className="p-0">
-                                <div className="relative aspect-4/3 w-full bg-muted/30">
-                                    <Image
-                                        src={HERO_IMAGE}
-                                        alt={
-                                            dict.heroImageAlt ??
-                                            `${shared.siteName} — hero`
-                                        }
-                                        fill
-                                        className="object-contain object-center p-3 md:p-4"
-                                        priority
-                                    />
-                                </div>
-                            </CardContent>
-                        </Card>
+                    {/* Right: full-bleed image — desktop only */}
+                    <div className="relative hidden self-stretch overflow-hidden md:block [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_100%)]">
+                        <Image
+                            src={HERO_IMAGE}
+                            alt={dict.heroImageAlt ?? `${shared.siteName} — hero`}
+                            fill
+                            className="object-cover object-center"
+                            priority
+                        />
                     </div>
                 </div>
             </Container>
+
             {dict.trustBar ? (
                 <>
                     <Separator />

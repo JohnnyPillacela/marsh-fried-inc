@@ -7,7 +7,7 @@ export function LanguageSwitcher() {
     const { locale, toggleLocale } = useLocale()
 
     return (
-        <Button onClick={toggleLocale} variant="ghost" size="xs">
+        <Button onClick={toggleLocale} variant="ghost" size="lg">
             {locale === "en" ? "ES" : "EN"}
         </Button>
     )

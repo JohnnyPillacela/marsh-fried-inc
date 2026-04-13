@@ -31,7 +31,7 @@ export function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
             <Container>
-                <nav className="flex h-14 items-center justify-between">
+                <nav className="flex h-14 items-center justify-between text-lg">
                     <Link
                         href={locale === "es" ? "/es" : "/"}
                         className="inline-flex items-center justify-center text-foreground"
@@ -52,12 +52,12 @@ export function Navbar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                                className="text-muted-foreground transition-colors hover:text-foreground"
                             >
                                 {item.label}
                             </Link>
                         ))}
-                        <Button asChild size="sm">
+                        <Button asChild size="lg">
                             <Link href={navCtaHref}>{shared.navCta.label}</Link>
                         </Button>
                         <LanguageSwitcher />
@@ -68,7 +68,7 @@ export function Navbar() {
                         <LanguageSwitcher />
                         <Sheet open={open} onOpenChange={setOpen}>
                             <SheetTrigger asChild>
-                                <Button variant="ghost" size="icon-sm" aria-label="Open menu">
+                                <Button variant="ghost" size="icon-lg" aria-label="Open menu">
                                     <MenuIcon className="h-5 w-5" />
                                 </Button>
                             </SheetTrigger>

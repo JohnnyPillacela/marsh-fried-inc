@@ -3,9 +3,17 @@ import type { Locale } from "./locale"
 export type HeroDict = {
     title: string
     subtitle: string
-    sideContent?: string
+    /** Small line above the title; defaults to `shared.siteName` when omitted. */
+    eyebrow?: string
     cta?: string
     ctaHref?: string
+    /** Outlined secondary action (e.g. call). Href defaults to `shared.contact.phoneHref` when omitted. */
+    secondaryCta?: string
+    secondaryCtaHref?: string
+    /** Full-width line below the hero (trust / credentials). */
+    trustBar?: string
+    /** Accessible label for the hero illustration. */
+    heroImageAlt?: string
 }
 
 export type AboutDict = {

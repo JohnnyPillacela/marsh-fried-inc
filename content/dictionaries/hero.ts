@@ -2,21 +2,29 @@ import type { HeroDict } from "@/types/dictionary"
 
 export const heroDict = {
     en: {
-        title: "Pillacela Agency",
+        eyebrow: "Marsh Fried Incorporated",
+        title: "Accounting & Tax Services for Businesses",
         subtitle:
-            "Modern websites for small businesses. Built with performance, SEO, and simplicity in mind. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        sideContent:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate.",
-        cta: "Book a Consultation",
+            "Experienced accounting, bookkeeping, and tax services for businesses in Union County and across New Jersey.",
+        cta: "Schedule Appointment",
         ctaHref: "#contact",
+        secondaryCta: "Call Office",
+        trustBar:
+            "Trusted by 500+ clients • CPA Licensed • Union County, New Jersey",
+        heroImageAlt:
+            "Financial services checklist: tax preparation, accounting, bookkeeping, and reporting",
     } satisfies HeroDict,
     es: {
-        title: "Pillacela Agency",
+        eyebrow: "Marsh Fried Incorporated",
+        title: "Servicios de contabilidad e impuestos para empresas",
         subtitle:
-            "Sitios web modernos para pequeñas empresas. Construidos con rendimiento, SEO y simplicidad. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        sideContent:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit.",
-        cta: "Reservar Consulta",
+            "Contabilidad, teneduría de libros e impuestos con experiencia para empresas en el condado de Union y en todo Nueva Jersey.",
+        cta: "Agendar cita",
         ctaHref: "#contact",
+        secondaryCta: "Llamar a la oficina",
+        trustBar:
+            "Más de 500 clientes de confianza • CPA con licencia • Condado de Union, Nueva Jersey",
+        heroImageAlt:
+            "Ilustración de servicios financieros: impuestos, contabilidad, libros e informes",
     } satisfies HeroDict,
 } as const

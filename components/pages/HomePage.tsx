@@ -2,7 +2,6 @@
 
 import BriefAbout from "@/components/briefs/BriefAbout"
 import BriefOwner from "@/components/briefs/BriefOwner"
-import BriefContact from "@/components/briefs/BriefContact"
 import BriefFaq from "@/components/briefs/BriefFaq"
 import BriefHero from "@/components/briefs/BriefHero"
 import BriefPainPoints from "@/components/briefs/BriefPainPoints"
@@ -70,7 +69,6 @@ export default function HomePage({ locale }: Props) {
             <CtaBanner dict={ctaBanner} />
             <BriefFaq dict={faq} />
             <BriefServiceAreas dict={serviceAreas} />
-            <BriefContact dict={contact} />
             <ContactSection dict={contact} form={form}/>
             <BriefOwner dict={owner} />
         </>

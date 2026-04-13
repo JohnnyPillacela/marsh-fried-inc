@@ -31,23 +31,24 @@ export function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
             <Container>
-                <nav className="flex h-14 items-center justify-between text-lg">
+                <nav className="flex h-16 items-center justify-between text-lg">
                     <Link
                         href={locale === "es" ? "/es" : "/"}
-                        className="inline-flex items-center justify-center text-foreground"
+                        className="inline-flex items-center justify-left text-foreground"
                     >
                         <Image
-                            src="/logos/Full-Logo-2000x550.png"
+                            src="/logos/full-logo-2000x370.png"
                             alt={shared.siteName}
                             width={2000}
-                            height={550}
-                            className="h-18 w-auto"
+                            height={350}
+                            className="h-14 py-1 w-auto"
                             priority
+
                         />
                     </Link>
 
                     {/* Desktop nav — hidden on mobile */}
-                    <div className="hidden items-center gap-6 md:flex">
+                    <div className="hidden items-center gap-6 md:flex justify-between">
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}

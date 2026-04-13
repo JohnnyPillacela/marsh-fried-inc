@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-type CtaButtonVariant = "primary" | "secondary" | "inverted"
+type CtaButtonVariant = "primary" | "secondary" | "inverted" | "outline"
 
 type CtaButtonProps = {
     href: string
@@ -29,7 +29,7 @@ export function CtaButton({
 }: CtaButtonProps) {
     const isExternal = href.startsWith("http")
     const buttonVariant =
-        variant === "inverted" || variant === "secondary" ? "outline" : "default"
+        variant === "inverted" || variant === "secondary" || variant === "outline" ? "outline" : "default"
 
     return (
         <Button

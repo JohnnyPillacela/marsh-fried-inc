@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/shared/section-heading"
 import type { ContactDict, FormDict } from "@/types/dictionary"
 import { ContactForm } from "./contact-form"
 import { ContactInfo } from "./contact-info"
+import { sectionBg } from "@/config/sections"
 
 type Props = {
     dict: ContactDict
@@ -13,7 +14,7 @@ type Props = {
 // Tier 2+ — multi-page sites. Two-column: contact info left, form right.
 export function ContactSection({ dict, form }: Props) {
     return (
-        <Section id="contact">
+        <Section id="contact" variant={sectionBg.contact}>
             <Container>
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
                     <div>

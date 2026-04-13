@@ -30,7 +30,7 @@ export function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
-            <Container>
+            <Container className="px-4 md:px-4">
                 <nav className="flex h-14 md:h-16 items-center justify-between text-lg">
                     <Link
                         href={locale === "es" ? "/es" : "/"}

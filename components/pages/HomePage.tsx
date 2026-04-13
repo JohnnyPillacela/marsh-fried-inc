@@ -63,7 +63,6 @@ export default function HomePage({ locale }: Props) {
             <BriefServices dict={services} stats={stats} />
             <BriefProcess dict={process} />
             <BriefWork dict={work} />
-            <BriefTestimonials dict={testimonials} />
             <TestimonialsSection dict={testimonials} />
             <BriefPricing dict={pricing} trustBadges={trustBadges} />
             <CtaBanner dict={ctaBanner} />

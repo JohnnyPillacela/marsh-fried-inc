@@ -29,19 +29,19 @@ export function Navbar() {
         : shared.navCta.href
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
             <Container>
-                <nav className="flex h-16 items-center justify-between text-lg">
+                <nav className="flex h-14 md:h-16 items-center justify-between text-lg">
                     <Link
                         href={locale === "es" ? "/es" : "/"}
-                        className="inline-flex items-center justify-left text-foreground"
+                        className="inline-flex items-center justify-center text-foreground"
                     >
                         <Image
                             src="/logos/full-logo-2000x370.png"
                             alt={shared.siteName}
                             width={2000}
                             height={350}
-                            className="h-14 py-1 w-auto"
+                            className="h-13 md:h-14 py-1.5 md:py-1 w-auto"
                             priority
 
                         />
@@ -78,13 +78,13 @@ export function Navbar() {
                                     <SheetTitle className="sr-only">
                                         {shared.siteName} Logo
                                     </SheetTitle>
-                                    <div className="flex justify-center">
+                                    <div className="flex items-center justify-center">
                                         <Image
-                                            src="/logos/Full-Logo-2000x550.png"
+                                            src="/logos/full-logo-2000x370.png"
                                             alt=""
-                                            width={800}
-                                            height={225}
-                                            className="h-16 w-auto"
+                                            width={2000}
+                                            height={370}
+                                            className="h-10 w-auto"
                                         />
                                     </div>
                                 </SheetHeader>

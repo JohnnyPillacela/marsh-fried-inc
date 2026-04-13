@@ -1,12 +1,14 @@
 import { cn } from "@/lib/utils"
 
 export type SectionVariant = "default" | "muted" | "accent" | "primary"
-
+    | "whiteForty" | "whiteSixty"
 const variantClasses: Record<SectionVariant, string> = {
     default: "bg-background",
     muted:   "bg-secondary",
     accent:  "bg-accent text-accent-foreground",
     primary: "bg-primary text-primary-foreground",
+    whiteForty: "bg-white/40 text-foreground",
+    whiteSixty: "bg-white/60 text-foreground",
 }
 
 type SectionProps = {

@@ -22,9 +22,9 @@ export const sectionBg = {
     testimonials: "default",
     trustBadges:  "whiteForty",
     stats:        "whiteForty",
-    pricing:      "default",
+    pricing:      "whiteSixty",
     faq:          "whiteForty",
     serviceAreas: "default",
-    contact:      "whiteForty",
+    contact:      "whiteSixty",
     owner:        "default",
 } as const satisfies Record<string, SectionVariant>

@@ -1,18 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
 import { cn, toExternalHref } from "@/lib/utils"
 import type { TestimonialItem } from "@/types/dictionary"
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
-
-function getInitials(name: string) {
-    return name
-        .split(" ")
-        .map((n) => n[0])
-        .join("")
-        .toUpperCase()
-        .slice(0, 2)
-}
 
 type Props = {
     item: TestimonialItem
@@ -30,15 +20,18 @@ export function TestimonialSectionCard({ item, visitSiteLabel }: Props) {
                 "transition-[box-shadow,ring-color] duration-200 hover:shadow-md hover:ring-border",
             )}
         >
-            <div className="relative px-6 pt-8 pb-6">
-                <blockquote className="relative text-[15px] leading-[1.65] text-foreground">
-                    <span
-                        className="mb-1 block font-serif text-3xl leading-none text-muted-foreground/50 select-none"
-                        aria-hidden
-                    >
-                        &ldquo;
-                    </span>
-                    <span className="text-pretty">{item.quote}</span>
+            {/* Top primary accent bar */}
+            <div className="h-0.5 w-full bg-primary" aria-hidden />
+
+            <div className="flex flex-1 flex-col px-6 pt-7 pb-6">
+                <span
+                    aria-hidden
+                    className="mb-3 block select-none font-serif text-4xl leading-none text-primary/30"
+                >
+                    &ldquo;
+                </span>
+                <blockquote className="flex-1 text-[15px] leading-[1.65] text-foreground text-pretty">
+                    {item.quote}
                     <span className="sr-only">&rdquo;</span>
                 </blockquote>
                 {item.websiteUrl && (
@@ -58,28 +51,13 @@ export function TestimonialSectionCard({ item, visitSiteLabel }: Props) {
                 )}
             </div>
 
-            <div className="border-t border-border/50 bg-muted/25 px-6 py-5">
-                <div className="flex items-center gap-4">
-                    <Avatar
-                        size="lg"
-                        className="ring-2 ring-background shadow-md ring-offset-2 ring-offset-muted/40"
-                    >
-                        {item.avatarUrl && (
-                            <AvatarImage src={item.avatarUrl} alt={item.author} />
-                        )}
-                        <AvatarFallback className="text-sm font-semibold">
-                            {getInitials(item.author)}
-                        </AvatarFallback>
-                    </Avatar>
-                    <div className="min-w-0 flex-1 space-y-0.5">
-                        <p className="text-sm font-semibold leading-tight tracking-tight text-foreground">
-                            {item.author}
-                        </p>
-                        <p className="text-pretty text-sm leading-snug text-muted-foreground">
-                            {item.role}
-                        </p>
-                    </div>
-                </div>
+            <div className="border-t border-border/50 bg-muted/30 px-6 py-4">
+                <p className="text-sm font-semibold leading-tight text-foreground">
+                    {item.author}
+                </p>
+                <p className="mt-0.5 text-sm leading-snug text-muted-foreground">
+                    {item.role}
+                </p>
             </div>
         </Card>
     )

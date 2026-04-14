@@ -1,12 +1,13 @@
 "use client"
 
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { Checkbox } from "@/components/ui/checkbox"
 import { contactSchema, type ContactFormValues } from "@/lib/validations/contact"
 import type { FormDict } from "@/types/dictionary"
 
@@ -19,10 +20,11 @@ export function ContactForm({ form }: Props) {
         register,
         handleSubmit,
         reset,
+        control,
         formState: { errors, isSubmitting },
     } = useForm<ContactFormValues>({
         resolver: zodResolver(contactSchema),
-        defaultValues: { website: "" },
+        defaultValues: { website: "", service: [] },
     })
 
     async function onSubmit(data: ContactFormValues) {
@@ -91,6 +93,46 @@ export function ContactForm({ form }: Props) {
                             </p>
                         )}
                     </div>
+                </div>
+
+                <div className="space-y-2">
+                    <Label>{form.serviceLabel}</Label>
+                    <Controller
+                        name="service"
+                        control={control}
+                        render={({ field }) => (
+                            <div className="grid grid-cols-2 gap-2">
+                                {form.services.map((option) => {
+                                    const checked = field.value.includes(option.value)
+                                    return (
+                                        <label
+                                            key={option.value}
+                                            htmlFor={`service-${option.value}`}
+                                            className="flex cursor-pointer items-center gap-2.5 rounded-lg border border-input px-3 py-2.5 text-sm transition-colors hover:bg-accent has-data-[state=checked]:border-primary has-data-[state=checked]:bg-primary/5"
+                                        >
+                                            <Checkbox
+                                                id={`service-${option.value}`}
+                                                checked={checked}
+                                                onCheckedChange={(isChecked) => {
+                                                    field.onChange(
+                                                        isChecked
+                                                            ? [...field.value, option.value]
+                                                            : field.value.filter((v) => v !== option.value)
+                                                    )
+                                                }}
+                                            />
+                                            <span>{option.label}</span>
+                                        </label>
+                                    )
+                                })}
+                            </div>
+                        )}
+                    />
+                    {errors.service && (
+                        <p className="text-xs text-destructive">
+                            {errors.service.message}
+                        </p>
+                    )}
                 </div>
 
                 <div className="space-y-1.5">

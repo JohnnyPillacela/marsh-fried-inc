@@ -6,7 +6,6 @@ import BriefFaq from "@/components/briefs/BriefFaq"
 import BriefHero from "@/components/briefs/BriefHero"
 import BriefPainPoints from "@/components/briefs/BriefPainPoints"
 import BriefProcess from "@/components/briefs/BriefProcess"
-import BriefPricing from "@/components/briefs/BriefPricing"
 import BriefServices from "@/components/briefs/BriefServices"
 import BriefServiceAreas from "@/components/briefs/BriefServiceAreas"
 import BriefWork from "@/components/briefs/BriefWork"
@@ -24,7 +23,6 @@ import {
     getProcessDict,
     getTrustBadgesDict,
     getServiceAreasDict,
-    getPricingDict,
     getServicesDict,
     getTestimonialsDict,
     getWorkDict,
@@ -32,7 +30,6 @@ import {
 import type { Locale } from "@/types/locale"
 import { ContactSection } from "../sections/contact/contact-section"
 import { TestimonialsSection } from "../sections/testimonials/testimonials-section"
-import BriefTestimonials from "../briefs/BriefTestimonials"
 type Props = {
     locale: Locale
 }
@@ -51,7 +48,6 @@ export default function HomePage({ locale }: Props) {
     const faq = getFaqDict(locale)
     const serviceAreas = getServiceAreasDict(locale)
     const trustBadges = getTrustBadgesDict(locale)
-    const pricing = getPricingDict(locale)
     const ctaBanner = getCtaBannerDict(locale)
     const form = getFormDict(locale)
 
@@ -64,7 +60,6 @@ export default function HomePage({ locale }: Props) {
             <BriefProcess dict={process} />
             <BriefWork dict={work} />
             <TestimonialsSection dict={testimonials} />
-            <BriefPricing dict={pricing} trustBadges={trustBadges} />
             <CtaBanner dict={ctaBanner} />
             <BriefFaq dict={faq} />
             <BriefServiceAreas dict={serviceAreas} />

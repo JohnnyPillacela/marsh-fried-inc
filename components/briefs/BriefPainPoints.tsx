@@ -1,7 +1,5 @@
-import { XCircle } from "lucide-react"
 import { Container } from "@/components/layout/container"
 import { Section } from "@/components/layout/section"
-import { SectionHeading } from "@/components/shared/section-heading"
 import { sectionBg } from "@/config/sections"
 import type { PainPointsDict } from "@/types/dictionary"
 
@@ -14,23 +12,33 @@ export default function BriefPainPoints({ dict }: Props) {
     return (
         <Section id="pain-points" variant={sectionBg.painPoints}>
             <Container>
-                <div className="mx-auto max-w-2xl">
-                    {dict.title && (
-                        <SectionHeading title={dict.title} align="center" />
-                    )}
+                {dict.title && (
+                    <h2 className="mb-8 text-3xl font-bold tracking-tight max-w-2xl mx-auto">
+                        {dict.title}
+                    </h2>
+                )}
 
-                    <ul className="mt-8 space-y-4">
-                        {dict.items.map((item, i) => (
-                            <li key={i} className="flex items-start gap-3">
-                                <XCircle className="mt-0.5 size-5 shrink-0 text-destructive/70" />
-                                <span className="text-sm text-muted-foreground">{item}</span>
-                            </li>
-                        ))}
-                    </ul>
+                <div className="flex flex-col max-w-2xl mx-auto">
+                    {dict.items.map((item, i) => (
+                        <div
+                            key={i}
+                            className="flex items-center gap-6 border-l-4 border-primary bg-card px-6 py-5 ring-1 ring-foreground/10 -mb-px"
+                        >
+                            <span className="text-5xl font-black tabular-nums text-primary/15 leading-none select-none shrink-0 w-10 text-right">
+                                {i + 1}
+                            </span>
+                            <p className="text-sm text-foreground leading-relaxed">
+                                {item}
+                            </p>
+                        </div>
+                    ))}
 
                     {dict.closing && (
-                        <div className="mt-10 rounded-lg border border-border bg-background px-6 py-5">
-                            <p className="text-sm font-medium leading-relaxed text-foreground">
+                        <div className="flex items-center gap-6 border-l-4 border-primary bg-primary px-6 py-5 ring-1 ring-primary">
+                            <span className="text-5xl font-black tabular-nums text-primary-foreground/20 leading-none select-none shrink-0 w-10 text-right">
+                                ✓
+                            </span>
+                            <p className="text-sm text-primary-foreground font-medium leading-relaxed">
                                 {dict.closing}
                             </p>
                         </div>

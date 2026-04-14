@@ -3,9 +3,10 @@
 export function NewLeadEmail(props: {
     name: string
     email: string
+    service: string[]
     message: string
 }) {
-    const { name, email, message } = props
+    const { name, email, service, message } = props
 
     return (
         <div style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", backgroundColor: "#f4f4f5", padding: "40px 20px" }}>
@@ -40,6 +41,14 @@ export function NewLeadEmail(props: {
                                 </td>
                                 <td style={{ padding: "12px 0 12px 16px", borderBottom: "1px solid #f4f4f5", verticalAlign: "top" }}>
                                     <a href={`mailto:${email}`} style={{ fontSize: "15px", color: "#2563eb", textDecoration: "none", fontWeight: 500 }}>{email}</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style={{ padding: "12px 0", borderBottom: "1px solid #f4f4f5", verticalAlign: "top" }}>
+                                    <span style={{ fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: "#a1a1aa" }}>Service</span>
+                                </td>
+                                <td style={{ padding: "12px 0 12px 16px", borderBottom: "1px solid #f4f4f5", verticalAlign: "top" }}>
+                                    <span style={{ fontSize: "15px", color: "#18181b", fontWeight: 500 }}>{service.join(", ")}</span>
                                 </td>
                             </tr>
                             <tr>

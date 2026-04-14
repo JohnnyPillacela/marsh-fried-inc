@@ -10,6 +10,9 @@ export const contactSchema = z.object({
     email: z
         .string()
         .email({ message: "Please enter a valid email address." }),
+    service: z
+        .array(z.string())
+        .min(1, { message: "Please select at least one service." }),
     message: z
         .string()
         .min(10, { message: "Message must be at least 10 characters." })

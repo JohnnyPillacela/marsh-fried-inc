@@ -47,9 +47,16 @@ export type FooterDict = {
     rightsReserved: string
 }
 
+export type FormServiceOption = {
+    value: string
+    label: string
+}
+
 export type FormDict = {
     name: string
     email: string
+    serviceLabel: string
+    services: FormServiceOption[]
     message: string
     submit: string
     sending: string

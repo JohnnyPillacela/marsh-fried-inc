@@ -8,7 +8,6 @@ import BriefPainPoints from "@/components/briefs/BriefPainPoints"
 import BriefProcess from "@/components/briefs/BriefProcess"
 import BriefServices from "@/components/briefs/BriefServices"
 import BriefServiceAreas from "@/components/briefs/BriefServiceAreas"
-import BriefWork from "@/components/briefs/BriefWork"
 import { CtaBanner } from "@/components/shared/cta-banner"
 import {
     getAboutDict,
@@ -25,7 +24,6 @@ import {
     getServiceAreasDict,
     getServicesDict,
     getTestimonialsDict,
-    getWorkDict,
 } from "@/lib/dictionaries"
 import type { Locale } from "@/types/locale"
 import { ContactSection } from "../sections/contact/contact-section"
@@ -42,7 +40,6 @@ export default function HomePage({ locale }: Props) {
     const owner = getOwnerDict(locale)
     const process = getProcessDict(locale)
     const services = getServicesDict(locale)
-    const work = getWorkDict(locale)
     const contact = getContactDict(locale)
     const testimonials = getTestimonialsDict(locale)
     const faq = getFaqDict(locale)
@@ -58,7 +55,6 @@ export default function HomePage({ locale }: Props) {
             <BriefAbout dict={about} />
             <BriefServices dict={services} stats={stats} />
             <BriefProcess dict={process} />
-            <BriefWork dict={work} />
             <TestimonialsSection dict={testimonials} />
             <CtaBanner dict={ctaBanner} />
             <BriefFaq dict={faq} />

@@ -206,12 +206,17 @@ export type ProcessDict = {
     items: ProcessStep[]
 }
 
-export type OwnerDict = {
+export type TeamMemberItem = {
     name: string
     title?: string
     bio: string
     imageUrl?: string
     credentials?: string[]
+}
+
+export type OwnerDict = {
+    sectionTitle?: string
+    items: TeamMemberItem[]
     cta?: string
     ctaHref?: string
 }

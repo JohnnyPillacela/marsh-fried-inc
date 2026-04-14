@@ -8,7 +8,7 @@ export const ownerDict = {
                 name: "John Cisneros",
                 title: "Founder & President",
                 bio: "John is a seasoned accountant with decades of experience serving clients across the United States. His practice covers tax amendments, audits, financial statements, and ongoing accounting support. Before Marsh Fried Incorporated, he worked on Wall Street and ran his own practice there — bringing that same rigor to small and mid-sized businesses today.",
-                imageUrl: "/people/john.png",
+                imageUrl: "/people/john.jpeg",
                 credentials: [
                     "40+ Years of Experience",
                     "Served Multiple States",
@@ -37,7 +37,7 @@ export const ownerDict = {
                 name: "John Cisneros",
                 title: "Fundador y Presidente",
                 bio: "John es un contador con amplia experiencia y clientes en varios estados de EE. UU. Su práctica incluye enmiendas fiscales, auditorías, estados financieros y contabilidad continua. Trabajó en Wall Street y tuvo su propia firma allí antes de Marsh Fried Incorporated — y aplica ese mismo rigor a las pequeñas y medianas empresas.",
-                imageUrl: "/people/john.png",
+                imageUrl: "/people/john.jpeg",
                 credentials: [
                     "40+ Years of Experience",
                     "Bilingual — English & Spanish",

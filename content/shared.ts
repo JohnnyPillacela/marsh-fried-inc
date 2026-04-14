@@ -1,9 +1,9 @@
 /** Non-translatable site config: brand, contact, social, URLs */
 export const shared = {
-    siteName: "Pillacela Agency",
+    siteName: "Marsh Fried Incorporated",
     siteDescription:
-        "Modern websites for small businesses built with performance, SEO, and simplicity in mind.",
-    url: "https://example.com",
+        "Accounting & Tax Services for Businesses in Union County and across New Jersey.",
+    url: "https://marshfried.com",
     contact: {
         email: "hello@example.com",
         phone: "(555) 123-4567",

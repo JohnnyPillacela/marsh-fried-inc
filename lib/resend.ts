@@ -13,7 +13,7 @@ export async function sendLeadEmail(data: {
 }) {
     return resend.emails.send({
         from: "onboarding@resend.dev",
-        to: ["Cisneros.John@gmail.com"],
+        to: ["john.cisneros.mfs@gmail.com"],
         subject: `New Lead - From Website Marsh Fried Incorporated`,
         react: NewLeadEmail(data),
     })

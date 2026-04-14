@@ -2,6 +2,7 @@ import Image from "next/image"
 import { UserCircle } from "lucide-react"
 import { Container } from "@/components/layout/container"
 import { Section } from "@/components/layout/section"
+import { SectionHeading } from "@/components/shared/section-heading"
 import { CtaButton } from "@/components/shared/cta-button"
 import { Badge } from "@/components/ui/badge"
 import { sectionBg } from "@/config/sections"
@@ -16,59 +17,67 @@ export default function BriefOwner({ dict }: Props) {
     return (
         <Section id="owner" variant={sectionBg.owner}>
             <Container>
-                <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
-                    {/* Left: photo */}
-                    <div className="flex justify-center md:justify-start">
-                        {dict.imageUrl ? (
-                            <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-2xl border border-border">
-                                <Image
-                                    src={dict.imageUrl}
-                                    alt={dict.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                        ) : (
-                            <div className="flex aspect-square w-full max-w-sm items-center justify-center rounded-2xl border border-border bg-background">
-                                <UserCircle className="size-24 text-muted-foreground/30" />
-                            </div>
-                        )}
-                    </div>
+                {dict.sectionTitle && (
+                    <SectionHeading title={dict.sectionTitle} align="center" />
+                )}
 
-                    {/* Right: identity */}
-                    <div>
-                        {dict.title && (
-                            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-                                {dict.title}
+                <div className="mt-10 grid gap-8 sm:grid-cols-2">
+                    {dict.items.map((member, i) => (
+                        <div key={i} className="flex flex-col gap-5 rounded-xl border border-border bg-card p-6">
+                            {/* Photo */}
+                            <div className="flex items-center gap-4">
+                                {member.imageUrl ? (
+                                    <div className="relative size-16 shrink-0 overflow-hidden rounded-full border border-border">
+                                        <Image
+                                            src={member.imageUrl}
+                                            alt={member.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="flex size-16 shrink-0 items-center justify-center rounded-full border border-border bg-muted">
+                                        <UserCircle className="size-8 text-muted-foreground/40" />
+                                    </div>
+                                )}
+                                <div>
+                                    {member.title && (
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                                            {member.title}
+                                        </p>
+                                    )}
+                                    <h3 className="text-lg font-bold tracking-tight">
+                                        {member.name}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            {/* Bio */}
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                {member.bio}
                             </p>
-                        )}
-                        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                            {dict.name}
-                        </h2>
-                        <p className="mt-4 text-muted-foreground">{dict.bio}</p>
 
-                        {dict.credentials && dict.credentials.length > 0 && (
-                            <div className="mt-6 flex flex-wrap gap-2">
-                                {dict.credentials.map((c, i) => (
-                                    <Badge key={i} variant="outline" className="text-xs">
-                                        {c}
-                                    </Badge>
-                                ))}
-                            </div>
-                        )}
-
-                        {dict.cta && (
-                            <div className="mt-8">
-                                <CtaButton
-                                    href={dict.ctaHref ?? "#contact"}
-                                    variant="secondary"
-                                >
-                                    {dict.cta}
-                                </CtaButton>
-                            </div>
-                        )}
-                    </div>
+                            {/* Credentials */}
+                            {member.credentials && member.credentials.length > 0 && (
+                                <div className="flex flex-wrap gap-2">
+                                    {member.credentials.map((c, j) => (
+                                        <Badge key={j} variant="outline" className="text-xs">
+                                            {c}
+                                        </Badge>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
+
+                {dict.cta && (
+                    <div className="mt-8 flex justify-center">
+                        <CtaButton href={dict.ctaHref ?? "#contact"} variant="secondary">
+                            {dict.cta}
+                        </CtaButton>
+                    </div>
+                )}
             </Container>
         </Section>
     )

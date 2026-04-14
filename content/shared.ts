@@ -5,10 +5,10 @@ export const shared = {
         "Accounting & Tax Services for Businesses in Union County and across New Jersey.",
     url: "https://marshfried.com",
     contact: {
-        email: "hello@example.com",
-        phone: "(555) 123-4567",
+        email: "cisneros.john@gmail.com",
+        phone: "(917) 531-1721",
         phoneHref: "tel:+15551234567",
-        address: "123 Business Street, City, State",
+        address: "123 Sayre Street, Elizabeth, NJ",
     },
     social: {
         instagram: "",

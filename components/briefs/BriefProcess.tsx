@@ -8,15 +8,29 @@ type Props = {
     dict: ProcessDict
 }
 
-function ProcessCard({ item }: { item: ProcessStep }) {
+function ProcessCard({ item, isLast }: { item: ProcessStep; isLast: boolean }) {
     return (
-        <div className="flex flex-col gap-4 rounded-lg border border-border bg-muted/40 p-6">
-            <span className="text-4xl font-bold tracking-tight text-primary/30">
-                {item.step}
-            </span>
-            <div>
-                <h3 className="text-base font-semibold">{item.title}</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground">{item.description}</p>
+        <div className="relative flex gap-5 lg:flex-col lg:items-center lg:gap-0 lg:text-center">
+            {/* Circle + vertical connector (mobile) */}
+            <div className="flex flex-col items-center lg:contents">
+                <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-md ring-4 ring-primary/15 lg:mb-6">
+                    {item.step}
+                </div>
+                {/* Vertical line — mobile only */}
+                {!isLast && (
+                    <div
+                        aria-hidden
+                        className="mt-1 w-px flex-1 border-l border-dashed border-border lg:hidden"
+                    />
+                )}
+            </div>
+
+            {/* Content */}
+            <div className="pb-8 lg:pb-0">
+                <h3 className="text-sm font-semibold">{item.title}</h3>
+                <p className="mt-1.5 max-w-[18ch] text-sm leading-relaxed text-muted-foreground lg:mx-auto">
+                    {item.description}
+                </p>
             </div>
         </div>
     )
@@ -32,10 +46,21 @@ export default function BriefProcess({ dict }: Props) {
                     description={dict.description}
                     align="center"
                 />
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {dict.items.map((item, i) => (
-                        <ProcessCard key={i} item={item} />
-                    ))}
+                <div className="relative mt-10">
+                    {/* Horizontal connector line — desktop only, sits at circle midpoint (h-11 = 44px → top-[22px]) */}
+                    <div
+                        aria-hidden
+                        className="absolute top-[22px] left-[calc(100%/8)] right-[calc(100%/8)] hidden h-px border-t border-dashed border-border lg:block"
+                    />
+                    <div className="grid lg:grid-cols-4">
+                        {dict.items.map((item, i) => (
+                            <ProcessCard
+                                key={i}
+                                item={item}
+                                isLast={i === dict.items.length - 1}
+                            />
+                        ))}
+                    </div>
                 </div>
             </Container>
         </Section>

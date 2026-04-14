@@ -3,62 +3,62 @@ import type { ProcessDict } from "@/types/dictionary"
 export const processDict = {
     en: {
         title: "How It Works",
-        description: "A simple, proven process — from first conversation to live site.",
+        description: "A straightforward process built around your business — not the other way around.",
         items: [
             {
                 step: "01",
-                title: "Discovery",
+                title: "Free Consultation",
                 description:
-                    "We learn about your business, goals, and customers in a quick 30-minute call.",
+                    "Tell us about your business and what you need. No paperwork, no commitment — just an honest conversation.",
             },
             {
                 step: "02",
-                title: "Design",
+                title: "Onboarding",
                 description:
-                    "We build a clean, branded design tailored to your industry and client expectations.",
+                    "We collect your documents, review your existing records, and identify exactly where things stand.",
             },
             {
                 step: "03",
-                title: "Build",
+                title: "We Handle It",
                 description:
-                    "Your site is developed with performance, SEO, and mobile-first in mind — fast by default.",
+                    "Your books stay current, taxes get filed on time, and payroll runs without a hitch — every single month.",
             },
             {
                 step: "04",
-                title: "Launch",
+                title: "Ongoing Partnership",
                 description:
-                    "We go live, submit your sitemap to Google, and hand you full ownership of everything.",
+                    "Monthly financial summaries, year-round CPA access, and proactive advice as your business grows.",
             },
         ],
     } satisfies ProcessDict,
     es: {
         title: "Cómo Funciona",
         description:
-            "Un proceso simple y probado — desde la primera conversación hasta el sitio en vivo.",
+            "Un proceso directo diseñado para tu negocio — no al revés.",
         items: [
             {
                 step: "01",
-                title: "Descubrimiento",
+                title: "Consulta Gratuita",
                 description:
-                    "Conocemos tu negocio, objetivos y clientes en una llamada rápida de 30 minutos.",
+                    "Cuéntanos sobre tu negocio y lo que necesitas. Sin papeles, sin compromiso — solo una conversación honesta.",
             },
             {
                 step: "02",
-                title: "Diseño",
+                title: "Incorporación",
                 description:
-                    "Creamos un diseño limpio y con tu identidad de marca, adaptado a tu industria.",
+                    "Recopilamos tus documentos, revisamos tus registros actuales e identificamos exactamente cómo están las cosas.",
             },
             {
                 step: "03",
-                title: "Desarrollo",
+                title: "Nos Encargamos",
                 description:
-                    "Tu sitio se construye con rendimiento, SEO y diseño móvil como prioridad — rápido por defecto.",
+                    "Tu contabilidad se mantiene al día, los impuestos se presentan a tiempo y la nómina corre sin problemas — cada mes.",
             },
             {
                 step: "04",
-                title: "Lanzamiento",
+                title: "Alianza Continua",
                 description:
-                    "Publicamos el sitio, enviamos tu mapa al buscador y te entregamos todo lo que es tuyo.",
+                    "Resúmenes financieros mensuales, acceso a tu CPA todo el año y asesoría proactiva conforme crece tu negocio.",
             },
         ],
     } satisfies ProcessDict,

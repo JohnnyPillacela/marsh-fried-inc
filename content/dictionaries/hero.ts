@@ -16,7 +16,7 @@ export const heroDict = {
     } satisfies HeroDict,
     es: {
         eyebrow: "Marsh Fried Incorporated",
-        title: "Servicios de contabilidad e impuestos para empresas",
+        title: "Servicios de contabilidad para empresas",
         subtitle:
             "Contabilidad, teneduría de libros e impuestos con experiencia para empresas en el condado de Union y en todo Nueva Jersey.",
         cta: "Agendar cita",

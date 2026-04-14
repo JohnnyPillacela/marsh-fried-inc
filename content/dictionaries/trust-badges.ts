@@ -5,7 +5,7 @@ export const trustBadgesDict = {
         items: [
             { label: "CPA Licensed & Insured" },
             { label: "500+ Clients Served" },
-            { label: "20+ Years of Experience" },
+            { label: "40+ Years of Experience" },
             { label: "Union County, New Jersey" },
         ],
     } satisfies TrustBadgesDict,
@@ -13,7 +13,7 @@ export const trustBadgesDict = {
         items: [
             { label: "CPA con licencia y asegurado" },
             { label: "Más de 500 clientes atendidos" },
-            { label: "Más de 20 años de experiencia" },
+            { label: "Más de 40 años de experiencia" },
             { label: "Condado de Union, Nueva Jersey" },
         ],
     } satisfies TrustBadgesDict,

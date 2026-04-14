@@ -92,6 +92,7 @@ export default function BriefHero({ dict, trustBadges }: Props) {
                             sizes="(max-width: 768px) 0vw, 50vw"
                             className="object-cover object-center"
                             priority
+                            loading="eager"
                         />
                     </div>
                 </div>

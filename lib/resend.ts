@@ -8,12 +8,13 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendLeadEmail(data: {
     name: string
     email: string
+    service: string[]
     message: string
 }) {
     return resend.emails.send({
         from: "onboarding@resend.dev",
-        to: process.env.CONTACT_EMAIL!,
-        subject: `New Lead - Pillacela Digital Agency (PDA)`,
+        to: ["Cisneros.John@gmail.com"],
+        subject: `New Lead - From Website Marsh Fried Incorporated`,
         react: NewLeadEmail(data),
     })
 }

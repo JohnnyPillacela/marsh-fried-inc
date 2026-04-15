@@ -7,7 +7,7 @@ export const shared = {
     contact: {
         email: "cisneros.john@gmail.com",
         phone: "(917) 531-1721",
-        phoneHref: "tel:+15551234567",
+        phoneHref: "tel:+19175311721",
         address: "123 Sayre Street, Elizabeth, NJ",
     },
     social: {

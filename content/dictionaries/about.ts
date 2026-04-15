@@ -8,7 +8,7 @@ export const aboutDict = {
             "Marsh Fried Incorporated is a CPA firm serving businesses throughout Union County and New Jersey. With over 20 years of experience, we provide personalized accounting, bookkeeping, and tax services that help businesses stay compliant, organized, and financially healthy.",
         highlights: [
             "Over 500 businesses served across New Jersey",
-            "CPA licensed and fully insured",
+            "Expert customer support 24/7",
             "Bilingual service in English and Spanish",
             "Personalized attention — you work directly with our CPAs",
         ],
@@ -22,7 +22,7 @@ export const aboutDict = {
             "Marsh Fried Incorporated es una firma de CPA que atiende a empresas en el condado de Union y en todo Nueva Jersey. Con más de 20 años de experiencia, ofrecemos servicios personalizados de contabilidad, teneduría de libros e impuestos que ayudan a las empresas a mantenerse en cumplimiento, organizadas y financieramente saludables.",
         highlights: [
             "Más de 500 empresas atendidas en Nueva Jersey",
-            "CPA con licencia y completamente asegurado",
+            "Soporte al cliente experto 24/7",
             "Servicio bilingüe en inglés y español",
             "Atención personalizada — trabajas directamente con nuestros CPAs",
         ],

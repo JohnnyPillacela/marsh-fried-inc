@@ -2,7 +2,7 @@ import type { HeroDict } from "@/types/dictionary"
 
 export const heroDict = {
     en: {
-        eyebrow: "Marsh Fried Incorporated",
+        eyebrow: "Marsh Fried Services Inc",
         title: "Accounting & Tax Services for Businesses",
         subtitle:
             "Experienced accounting, bookkeeping, and tax services for businesses in Union County and across New Jersey.",
@@ -10,12 +10,12 @@ export const heroDict = {
         ctaHref: "#contact",
         secondaryCta: "Call Office",
         trustBar:
-            "Trusted by 500+ clients • CPA Licensed • Union County, New Jersey",
+            "Trusted by 500+ clients • New Jersey • New York • Florida",
         heroImageAlt:
             "Financial services checklist: tax preparation, accounting, bookkeeping, and reporting",
     } satisfies HeroDict,
     es: {
-        eyebrow: "Marsh Fried Incorporated",
+        eyebrow: "Marsh Fried Services Inc",
         title: "Servicios de contabilidad para empresas",
         subtitle:
             "Contabilidad, teneduría de libros e impuestos con experiencia para empresas en el condado de Union y en todo Nueva Jersey.",
@@ -23,7 +23,7 @@ export const heroDict = {
         ctaHref: "#contact",
         secondaryCta: "Llamar a la oficina",
         trustBar:
-            "Más de 500 clientes de confianza • CPA con licencia • Condado de Union, Nueva Jersey",
+            "Más de 500 clientes de confianza • Nueva Jersey • Nueva York • Florida",
         heroImageAlt:
             "Ilustración de servicios financieros: impuestos, contabilidad, libros e informes",
     } satisfies HeroDict,

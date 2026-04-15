@@ -17,13 +17,13 @@ export const ownerDict = {
             },
             {
                 name: "Carla Bernal",
-                title: "Director General",
+                title: "General Director",
                 bio: "Carla Bernal is the heartbeat of client communication at Marsh Fried Incorporated. She leads bookkeeping alongside day-to-day client contact, so everyone stays informed and never left wondering about their account — especially clients who come to us after years of slow replies from their old accountant. She oversees client accounts with a sharp eye for accuracy and integrity, making sure every deliverable meets the firm's standards before it reaches the client.",
                 imageUrl: "",
                 credentials: [
-                    "15+ Years of Experience",
+                    "5+ Years of Experience",
                     "Bilingual — English & Spanish",
-                    "Served Multiple States",
+                    "Customer Support 24/7",
                 ],
             },
         ],
@@ -41,7 +41,7 @@ export const ownerDict = {
                 credentials: [
                     "40+ Years of Experience",
                     "Bilingual — English & Spanish",
-                    "Served Multiple States",
+                    "Atendido en varios estados",
                 ],
             },
             {
@@ -50,9 +50,9 @@ export const ownerDict = {
                 bio: "Carla coordina la teneduría de libros y el contacto diario con los clientes, para que todos estén informados y reciban respuesta oportuna. Supervisa las cuentas y verifica que el trabajo se realice con precisión e integridad.",
                 imageUrl: "",
                 credentials: [
-                    "15+ Years of Experience",
+                    "5+ Years of Experience",
                     "Bilingüe — Inglés y Español",
-                    "Served Multiple States",
+                    "Atencion al cliente 24/7",
                 ],
             },
         ],

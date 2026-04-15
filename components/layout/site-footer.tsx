@@ -63,7 +63,7 @@ export function SiteFooter() {
                         <SocialLinks />
                     </div>
 
-                    <div className="flex flex-col gap-6 sm:flex-row sm:gap-12">
+                    <div className="flex flex-row gap-12">
                         <nav className="space-y-2">
                             <span className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
                                 {footer.linksLabel}

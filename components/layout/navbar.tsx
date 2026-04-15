@@ -19,6 +19,8 @@ import {
 import { Container } from "./container"
 import { LanguageSwitcher } from "./language-switcher"
 
+const imgSrc = "/logos/marsh_fried_full_logo_2000x370.png";
+
 export function Navbar() {
     const pathname = usePathname()
     const locale = pathname?.startsWith("/es") ? "es" : "en"
@@ -37,7 +39,7 @@ export function Navbar() {
                         className="inline-flex items-center justify-center text-foreground"
                     >
                         <Image
-                            src="/logos/full-logo-2000x370.png"
+                            src={imgSrc}
                             alt={shared.siteName}
                             width={2000}
                             height={350}
@@ -80,7 +82,7 @@ export function Navbar() {
                                     </SheetTitle>
                                     <div className="flex items-center justify-center">
                                         <Image
-                                            src="/logos/full-logo-2000x370.png"
+                                            src={imgSrc}
                                             alt=""
                                             width={2000}
                                             height={370}

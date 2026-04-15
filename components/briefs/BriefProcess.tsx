@@ -10,7 +10,7 @@ type Props = {
 
 function ProcessCard({ item, isLast }: { item: ProcessStep; isLast: boolean }) {
     return (
-        <div className="relative flex gap-5 lg:flex-col lg:items-center lg:gap-0 lg:text-center">
+        <div className="relative flex w-full max-w-xs gap-5 lg:max-w-none lg:flex-col lg:items-center lg:gap-0 lg:text-center">
             {/* Circle + vertical connector (mobile) */}
             <div className="flex flex-col items-center lg:contents">
                 <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-md ring-4 ring-primary/15 lg:mb-6">
@@ -27,8 +27,8 @@ function ProcessCard({ item, isLast }: { item: ProcessStep; isLast: boolean }) {
 
             {/* Content */}
             <div className="pb-8 lg:pb-0">
-                <h3 className="text-sm font-semibold">{item.title}</h3>
-                <p className="mt-1.5 max-w-[18ch] text-sm leading-relaxed text-muted-foreground lg:mx-auto">
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-1.5 max-w-[18ch] text-lg leading-relaxed text-muted-foreground lg:mx-auto">
                     {item.description}
                 </p>
             </div>
@@ -52,7 +52,7 @@ export default function BriefProcess({ dict }: Props) {
                         aria-hidden
                         className="absolute top-[22px] left-[calc(100%/8)] right-[calc(100%/8)] hidden h-px border-t border-dashed border-border lg:block"
                     />
-                    <div className="grid lg:grid-cols-4">
+                    <div className="grid lg:grid-cols-4 justify-items-center lg:justify-items-stretch">
                         {dict.items.map((item, i) => (
                             <ProcessCard
                                 key={i}
